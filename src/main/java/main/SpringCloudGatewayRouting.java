@@ -22,6 +22,13 @@ public class SpringCloudGatewayRouting {
       .route("jobdetails2", r->r.path("/jobTypeTargetDetailsMgmt/**").uri("http://localhost:9110"))      
       .route("sched", r->r.path("/schedulerManagement/**").uri("http://localhost:9944")) //static routing
       .route("prodserv", r->r.path("/resourceCatalogManagement/**").uri("http://localhost:9978"))
+      .route("prodcachemain", r->r.path("/catalogCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodrescatcache", r->r.path("/resourceCatalogProdStructureCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodcompclassescache", r->r.path("/resourceCatalogCompClassesCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodlocaclassescache", r->r.path("/resourceCatalogLocaStructureCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodratingclassescache", r->r.path("/resourceCatalogRatingsCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodpricerangeclassescache", r->r.path("/resourceCatalogPriceRangeCacheManagement/**").uri("http://localhost:9544"))
+      .route("prodresourcesscache", r->r.path("/resourcesCacheManagement/**").uri("http://localhost:9544"))
       .build();
     }
 }
